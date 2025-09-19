@@ -1,0 +1,159 @@
+:root {
+  --primary-color: #a931ff;
+  --secondary-color: #881682;
+  --accent-color: #d400ff;
+  --text-color: #333;
+  --light-gray: #f5f5f5;
+  --medium-gray: #e0e0e0;
+  --dark-gray: #757575;
+  --success-color: #4caf50;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-gray);
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  background-color: var(--medium-gray);
+  align-items: center;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input, select {
+  padding: 8px 12px;
+  border: 1px solid var(--dark-gray);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+}
+
+#generate-btn {
+  margin-left: auto;
+  padding: 10px 25px;
+  background-color: var(--accent-color);
+}
+
+#generate-btn:hover {
+  background-color: #ad21f3;
+}
+
+.output-container {
+  padding: 20px;
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+#copy-btn {
+  background: none;
+  color: var(--dark-gray);
+  padding: 5px;
+}
+
+#copy-btn:hover {
+  color: var(--primary-color);
+  background: none;
+}
+
+.output {
+  background-color: var(--light-gray);
+  padding: 20px;
+  border-radius: 4px;
+  min-height: 300px;
+  white-space: pre-wrap;
+}
+
+.output p {
+  margin-bottom: 15px;
+}
+
+.copy-success {
+  color: var(--success-color);
+  font-size: 0.9rem;
+  margin-left: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.copy-success.show {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  #generate-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+}
