@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited Lorem Ipsum Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Unlimited Lorem Ipsum Generator</h1>
+            <p>Generate as much placeholder text as you need</p>
+        </header>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="paragraphs">Number of paragraphs:</label>
+                <input type="number" id="paragraphs" min="1" max="100" value="5">
+            </div>
+            
+            <div class="control-group">
+                <label for="type">Type:</label>
+                <select id="type">
+                    <option value="lorem">Classic Lorem Ipsum</option>
+                    <option value="hipster">Hipster Ipsum</option>
+                    <option value="office">Office Ipsum</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="length">Length:</label>
+                <select id="length">
+                    <option value="short">Short</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="long">Long</option>
+                    <option value="verylong">Very Long</option>
+                </select>
+            </div>
+            
+            <button id="generate-btn">Generate Text</button>
+        </div>
+        
+        <div class="output-container">
+            <div class="output-header">
+                <h2>Generated Text</h2>
+                <button id="copy-btn" title="Copy to clipboard">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="output" class="output"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
